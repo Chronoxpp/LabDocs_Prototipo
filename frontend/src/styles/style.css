@@ -1,0 +1,517 @@
+/* Variaveis de ambiente do CSS */
+:root 
+{
+    --corPrimaria: #16A34A;
+    --corPrimariaAlternativa: #22C55E;
+    --corSecundaria: #2563EB;
+    --corSecundariaAlternativa: #3B82F6;
+    --corPerigo: #DC2626;
+    --corInativo: #6E6E6E;
+
+    --corTextoPrimario: #000000;
+    --corTextoSecundario: #6E6E6E;
+    --corTitulo: #2563EB;
+
+    --corBackground: #FFFFFF;
+    --corBackgroundAlternativa: #F2F2F2;
+
+    --corContraste: #000000;
+    --corBordas: #D1D5DB;
+}
+
+/* Reset simples */
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    height: 100%;
+    width: 100%;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--corBackground);
+    color: var(--corTextoPrimario);
+    height: 100%;
+    width: 100%;
+}
+
+/* Estrutura base da pagina */
+.ContainerGeral 
+{
+    background-color: var(--corBackground);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.ContainerConteudo
+{
+    padding: 1rem 0rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    justify-content: start;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.AppBarra 
+{
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    overflow-x: auto;
+    flex-shrink: 0;
+}
+
+.BarraConsultaProjetos
+{
+    padding: 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.BarraConsultaProjetos input
+{
+    width: clamp(16rem, 50vw, 32rem);
+}
+
+.TextoTitulo 
+{
+    color: var(--corPrimaria);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.TextoSubTitulo
+{
+    color: var(--corPrimaria);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.ContainerLogin 
+{
+    flex-grow: 1;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.FormularioLogin 
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: 1rem;
+
+    width: clamp(16rem, 50vw, 32rem);
+}
+
+.ListaProjetos
+{
+    padding: 0.5rem 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    flex-shrink: 0;
+    justify-content: center;
+
+    gap: 2rem;
+}
+
+.ListaProjetos__Projeto
+{
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+
+    border: 1px solid var(--corBordas);
+    /* border-left-color: var(--corContraste); */
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+
+    width: clamp(24rem, 25vw, 72rem);
+}
+
+.Projeto__Titulo
+{
+    color: var(--corTextoPrimario);
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.InformacoesDaConta
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.InformacoesDaConta__DadosGerais
+{
+    width: clamp(16rem, 50vw, 32rem);
+}
+
+.InformacoesDaConta__AlteraSenha
+{
+    width: clamp(16rem, 50vw, 32rem);
+}
+
+.ContainerCentralizador
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: 1rem;
+
+    width: clamp(16rem, 50vw, 32rem);
+}
+
+.BlocoLabelInput 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+label
+{
+    font-size: 0.85rem;
+    color: var(--corTextoSecundario);
+    font-weight: bold;
+}
+
+select
+{
+    cursor: pointer;
+}
+
+input, select
+{
+    padding: 0.5rem 0.25rem;
+    border: 2px solid transparent;
+    border-bottom-color: var(--corBordas);
+
+    font-size: 1rem;
+
+    transition: all 0.3s ease;
+}
+
+input:hover, select:hover
+{
+    border-bottom-color: var(--corContraste);
+}
+
+input:focus, select:focus
+{
+    outline: none;
+    border-bottom-color: var(--corPrimaria);
+}
+
+.Botao
+{
+    text-align: center;
+
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--corContraste);
+    border-radius: 1rem;
+    background-color: var(--corBackground);
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.Botao:hover
+{
+    background-color: var(--corContraste);
+    color: var(--corBackground)
+}
+
+.Botao:active
+{
+    transform: scale(0.95);
+    transition: all 0.2s ease;
+}
+
+.Botao--Acao 
+{
+    border-color: var(--corPrimaria);
+    color: var(--corPrimaria);
+}
+
+.Botao--Acao:hover 
+{
+    background-color: var(--corPrimaria);
+    color: var(--corBackground);
+}
+
+.Botao--Perigo
+{
+    border-color: var(--corPerigo);
+    color: var(--corPerigo);
+}
+
+.Botao--Perigo:hover
+{
+    background-color: var(--corPerigo);
+    color: var(--corBackground);
+}
+
+.Link
+{
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    color: var(--corSecundaria);
+    font-weight: bold;
+}
+
+.Link:hover
+{
+    text-decoration: underline;
+}
+
+a
+{
+    text-decoration: none;
+    color: var(--corTextoPrimario);
+}
+
+.FundoMenuNavegacaoPrincipal
+{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        background: rgba(0,0,0,0.3);
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+
+        transition: opacity 0.3s ease;
+}
+
+.FundoMenuNavegacaoPrincipal--Aberto
+{
+    visibility: visible;
+}
+
+.MenuNavegacaoPrincipal
+{
+    background-color: var(--corBackground);
+
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: -1000rem;
+
+    width: clamp(16rem, 20vw, 24rem);
+    height: 100%;
+    padding: 1rem;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    overflow-y: auto;
+
+    transition: all 0.4s ease;
+}
+
+.MenuNavegacaoPrincipal--Aberto
+{
+    left: 0;
+    visibility: visible;
+}
+
+.MenuNavegacaoPrincipal nav
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.MenuNavegacaoPrincipal__Item
+{
+    background-color: transparent;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-bottom-color: var(--corBordas);
+    padding-bottom: 0.25rem;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.MenuNavegacaoPrincipal__Item:hover
+{
+    border-bottom-color: var(--corPrimaria);
+}
+
+.ContainerProjeto
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    justify-content: start;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.ProjetoMenu
+{
+    flex-shrink: 0;
+
+    padding: 0 0.75rem 0.75rem 0.75rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+.ProjetoMenu__Item
+{
+    background-color: transparent;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-bottom-color: var(--corBordas);
+    padding: 0.25rem;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.ProjetoMenu__Item:hover:not(.ProjetoMenu__Item--Selecionado)
+{
+    border-bottom-color: var(--corContraste);
+}
+
+.ProjetoMenu__Item--Selecionado
+{
+    border-bottom-color: var(--corPrimaria);
+}
+
+.ContainerProjetoVisualizacaoConteudo
+{
+    flex-grow: 1;
+}
+
+.ProjetoMenuArtefatos
+{
+    border: 2px solid transparent;
+
+    padding-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+    flex-shrink: 0;
+    gap: 1rem;
+}
+
+.ProjetoMenuArtefatos__Item
+{
+    color: var(--corSecundaria);
+
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-bottom-color: var(--corBordas);
+    padding: 0.25rem;
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.ProjetoMenuArtefatos__Item:hover:not(.ProjetoMenuArtefatos__Item--Selecionado)
+{
+    border-bottom-color: var(--corContraste);
+}
+
+.ProjetoMenuArtefatos__Item--Selecionado
+{
+    border-bottom-color: var(--corPrimaria);
+}
+
+@media screen and (width > 496px)
+{
+    .ProjetoMenu
+    {
+        justify-content: center;
+    }
+}
+
+@media screen and (width > 640px)
+{
+    .ProjetoMenuArtefatos
+    {
+        flex-direction: row;
+        justify-content: center;
+    }
+}

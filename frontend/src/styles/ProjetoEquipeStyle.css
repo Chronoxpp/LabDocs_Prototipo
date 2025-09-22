@@ -1,0 +1,108 @@
+/* tudo feito pela IA depois vou fazer a mão */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal */
+.ConteinerProjetoEquipe {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Seção de pesquisa */
+.PesquisarColabrador {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.PesquisarColabrador input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.PesquisarColabrador input[type="button"] {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.PesquisarColabrador input[type="button"]:hover {
+    background: #0056b3;
+}
+
+/* Lista de colaboradores */
+.ListaColaborador ol {
+    list-style: decimal inside;
+    margin-bottom: 15px;
+}
+
+.ListaColaborador li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ListaColaborador input[type="button"] {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.ListaColaborador input[type="button"]:hover {
+    background: #1e7e34;
+}
+
+/* Botões extras */
+.ListaColaborador > input[type="button"] {
+    width: 100%;
+    margin: 5px 0;
+    background: #6c757d;
+    color: #fff;
+}
+
+.ListaColaborador > input[type="button"]:hover {
+    background: #5a6268;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .PesquisarColabrador {
+        flex-direction: column;
+    }
+    .ListaColaborador li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

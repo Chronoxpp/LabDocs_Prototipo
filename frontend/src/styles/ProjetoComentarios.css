@@ -1,0 +1,178 @@
+:root
+{
+    --pretoPadrao: #000;
+    --brancoPadrao: #fff;
+    --verdePadrao: #15b245;
+    --sombraPadrao: 0 1px 3px rgba(0,0,0,0.3);
+    --sombraBotao: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+html
+{
+    height: 100%;
+    width: 100%;
+}
+
+body, body *
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+}
+
+.Comentarios
+{
+    width: 100%;
+    height: 100%;
+    max-width: 48rem;
+    margin: auto;
+    padding: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+}
+
+.Comentarios__Projeto
+{
+    border-bottom: 4px solid var(--pretoPadrao);
+}
+
+.Comentarios__Cabecalho
+{
+    font-size: 1.25rem;
+}
+
+.Comentarios__AdicionarComentario
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.Comentarios__Configuracoes
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+}
+
+.Comentarios__ListaComentarios
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.Comentarios__Comentario
+{
+    border: 2px solid transparent;
+    padding: 0.5rem;
+    box-shadow: var(--sombraPadrao);
+    font-size: 1rem;
+
+    transition: all ease 0.3s;
+}
+
+.Comentarios__Comentario:hover
+{
+    border-bottom-color: var(--pretoPadrao);
+}
+
+.BlocoLabelInput
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+label
+{
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"], select
+{
+    background-color: var(--brancoPadrao);
+    padding: 0.5rem 0.25rem;
+    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    box-shadow: var(--sombraPadrao);
+    font-size: 1rem;
+
+    transition: all 0.2s ease;
+}
+
+select
+{
+    cursor: pointer;
+}
+
+input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover, input[type="number"]:hover, select:hover
+{
+    border-bottom-color: var(--verdePadrao);
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus, select:focus
+{
+    outline: none;
+    border-bottom-color: var(--verdePadrao);
+    box-shadow: 0 2px 0 0 var(--verdePadrao);
+}
+
+input::placeholder {
+    font-weight: 300;
+    color: #999;
+}
+
+.Botao
+{
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    background-color: var(--brancoPadrao);
+    box-shadow: var(--sombraBotao);
+    font-weight: bold;
+    font-size: 1rem;
+
+    transition: all 0.2s ease;
+}
+
+.Botao:hover
+{
+    background-color: var(--pretoPadrao);
+    color: var(--brancoPadrao);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.Botao:active
+{
+    transform: scale(0.90);
+}
+
+.Botao--Positivo
+{
+    color: var(--verdePadrao);
+    background-color: var(--brancoPadrao);
+}
+
+.Botao--Positivo:hover
+{
+    background: var(--verdePadrao);
+    color: var(--brancoPadrao);
+}

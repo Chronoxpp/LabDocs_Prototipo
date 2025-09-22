@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto XPTO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="ContainerGeral">
+        <div id="containerMenuNavegacaoPrincipal"></div>
+
+        <header class="AppBarra">
+            <button class="Botao" id="botaoAbrirMenuNavegacaoPrincipal">Menu</button>
+            <h1 class="TextoTitulo">LabDocs</h1>
+        </header>
+
+        <div class="ContainerConteudo">
+            <div class="ContainerProjeto">
+                <nav class="ProjetoMenu">
+                    <button id="botaoArtefatos" class="ProjetoMenu__Item">Artefatos</button>
+                    <button id="botaoTarefas" class="ProjetoMenu__Item">Tarefas</button>
+                    <button id="botaoEquipe" class="ProjetoMenu__Item">Equipe</button>
+                    <button id="botaoConfiguracoes" class="ProjetoMenu__Item">Configurações</button>
+                </nav>
+
+                <div id="containerProjetoVisualizacao" class="ContainerProjetoVisualizacaoConteudo"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/componentes/menuNavegacaoPrincipal.js"></script>
+    <script type="module" src="../scripts/projeto.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+:root
+{
+    --pretoPadrao: #000;
+    --brancoPadrao: #fff;
+    --verdePadrao: #15b245;
+    --sombraPadrao: 0 1px 3px rgba(0,0,0,0.3);
+    --sombraBotao: 0px 1px 3px rgba(0,0,0,0.3);
+}
+
+html
+{
+    height: 100%;
+    width: 100%;
+}
+
+body, body *
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+}
+
+.ContainerGeral
+{
+    width: 100%;
+    height: 100%;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.QuadroKanban__Configuracoes
+{
+    padding: 0.5rem;
+    border-bottom: 4px solid black;
+
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: auto;
+}
+
+.QuadroKanban__Visualizacao
+{
+    padding: 0.5rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    gap: 2rem;
+}
+
+.QuadroKanban__Lista
+{
+    padding: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    flex-basis: 16rem;
+    gap: 1rem;
+}
+
+.QuadroKanban__Lista--NaoIniciado
+{
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+.QuadroKanban__Lista--EmAndamento
+{
+    background-color: rgba(15, 163, 177, 0.10);
+}
+
+.QuadroKanban__Lista--Concluido
+{
+    background-color: rgba(21, 178, 69, 0.1);
+}
+
+.QuadroKanbanLista__Cabecalho
+{
+    border-bottom: 2px solid black;
+}
+
+.QuadroKanbanLista__Configuracoes
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.QuadroKanbanLista__AdicaoTarefa
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.QuadroKanbanLista__Tarefas
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    gap: 1.5rem;
+}
+
+.QuadroKanbanLista__Tarefa
+{
+    background-color: rgba(255, 255, 255, 0.8);
+
+    /* Essa linha foi gerada por IA na tentativa de criar um efeito de vidro como background das tarefas*/
+    backdrop-filter: blur(10px); /* O desfoque principal */
+
+    padding: 0.5rem;
+
+    border-radius: 0.5rem;
+    box-shadow: var(--sombraPadrao);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.QuadroKanbanLista__Tarefa:hover
+{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.QuadroKanbanTarefa__Cabecalho
+{
+
+}
+
+.QuadroKanbanTarefa__Descricao
+{
+
+    word-break: break-word;
+}
+
+.QuadroKanbanTarefa__Subtarefas
+{
+
+}
+
+.QuadroKanbanTarefa__Acessar
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.Botao
+{
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    background-color: var(--brancoPadrao);
+    box-shadow: var(--sombraBotao);
+    font-weight: bold;
+    font-size: 1rem;
+
+    transition: all 0.2s ease;
+}
+
+.Botao:hover
+{
+    background-color: var(--pretoPadrao);
+    color: var(--brancoPadrao);
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.Botao:active
+{
+    transform: scale(0.85);
+}
+
+.Botao--Positivo
+{
+    color: var(--verdePadrao);
+    background-color: var(--brancoPadrao);
+}
+
+.Botao--Positivo:hover
+{
+    background: var(--verdePadrao);
+    color: var(--brancoPadrao);
+}
