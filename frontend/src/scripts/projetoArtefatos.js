@@ -1,4 +1,4 @@
-import {carregarComponente} from './utilitarios/carregadores.js';
+import {carregarComponente, importarModulo} from './utilitarios/carregadores.js';
 
 export function init()
 {
@@ -15,6 +15,7 @@ export function init()
             marcarItemProjetoMenuArtefatos(botaoArtefatoApresentacao);
 
             await carregarArtefato('ProjetoApresentacao.html');
+            await carregarScriptDoArtefato('../ProjetoApresentacao.js');
         }
     );
 
@@ -82,6 +83,11 @@ export function init()
             console.error('Erro ao carregar artefato do projeto!', erro);
             containerArtefatos.innerHTML = 'Erro ao carregar este artefato!';
         }
+    }
+
+    async function carregarScriptDoArtefato(urlScript)
+    {
+        await importarModulo(urlScript);
     }
 
     //Outras funcoes auxiliares

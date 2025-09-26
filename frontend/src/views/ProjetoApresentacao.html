@@ -1,3 +1,53 @@
-<div>
-    <h1>Apresentação projeto</h1>
+<div class="ContainerProjetoApresentacao">
+    <div id="projetoApresentacaoConteudo" class="ProjetoApresentacao__Conteudo">
+        <h1 class="ProjetoApresentacao__NomeProjeto">Projeto XPTO</h1>
+        <!-- Aqui os elementos criados serão adicionados -->
+    </div>
+
+    <button id="botaoAbrirPopupAdicaoElementos" class="Botao Botao--Acao" type="button">
+        + Adicionar elemento
+    </button>
+
+    <!-- Popup -->
+    <div class="ProjetoApresentacao__FundoPopupAdicaoElementos" id="fundoPopupAdicaoElementos">
+        <form class="ProjetoApresentacao__PopupAdicaoElementos" novalidate>
+            <p class="TextoTitulo">Adicionar elemento</p>
+
+            <div class="BlocoLabelInput">
+                <label for="inputTipoElemento">Tipo:</label>
+                <select id="inputTipoElemento">
+                    <option value="titulo">Título</option>
+                    <option value="subtitulo">Subtítulo</option>
+                    <option value="texto">Texto</option>
+                    <option value="listaOrdenada">Lista Ordenada</option>
+                    <option value="listaNaoOrdenada">Lista Não Ordenada</option>
+                    <option value="imagem">Imagem</option>
+                </select>
+            </div>
+
+            <div id="containerInputConteudoElemento" class="BlocoLabelInput">
+                <input type="text" id="inputConteudoElemento" placeholder="Digite o conteúdo do elemento">
+            </div>
+
+            <div id="containerInputTextoLivre" class="BlocoLabelInput">
+                <textarea id="inputTextoLivre" rows="6" placeholder="Escreva o texto aqui"></textarea>
+            </div>
+
+            <div id="containerInputTamanhoImagem" class="BlocoLabelInput">
+                <label for="inputTamanhoImagem">Tamanho:</label>
+                <select id="inputTamanhoImagem">
+                    <option value="pequena">Pequena</option>
+                    <option value="media">Média</option>
+                </select>
+            </div>
+
+            <button type="button" class="Botao Botao--Acao" id="botaoAdicionarElemento">Adicionar elemento</button>
+            <button type="button" class="Botao Botao--Perigo" id="botaoFecharPopup">Voltar</button>
+        </form>
+    </div>
 </div>
+
+
+
+
+

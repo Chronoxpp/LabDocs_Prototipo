@@ -17,6 +17,8 @@
 
     --corContraste: #000000;
     --corBordas: #D1D5DB;
+
+    --sombraVertical: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Reset simples */
@@ -231,7 +233,7 @@ select
     cursor: pointer;
 }
 
-input, select
+input, select, textarea
 {
     padding: 0.5rem 0.25rem;
     border: 2px solid transparent;
@@ -242,12 +244,12 @@ input, select
     transition: all 0.3s ease;
 }
 
-input:hover, select:hover
+input:hover, select:hover, textarea:hover
 {
     border-bottom-color: var(--corContraste);
 }
 
-input:focus, select:focus
+input:focus, select:focus, textarea:focus
 {
     outline: none;
     border-bottom-color: var(--corPrimaria);
@@ -258,7 +260,8 @@ input:focus, select:focus
     text-align: center;
 
     padding: 0.5rem 1rem;
-    border: 2px solid var(--corContraste);
+    border: 1px solid transparent;
+    box-shadow: var(--sombraVertical);
     border-radius: 1rem;
     background-color: var(--corBackground);
     font-size: 1rem;
@@ -282,7 +285,6 @@ input:focus, select:focus
 
 .Botao--Acao 
 {
-    border-color: var(--corPrimaria);
     color: var(--corPrimaria);
 }
 
@@ -294,7 +296,6 @@ input:focus, select:focus
 
 .Botao--Perigo
 {
-    border-color: var(--corPerigo);
     color: var(--corPerigo);
 }
 
@@ -302,6 +303,25 @@ input:focus, select:focus
 {
     background-color: var(--corPerigo);
     color: var(--corBackground);
+}
+
+.Botao--Desativado
+{
+    background-color: var(--corBackgroundAlternativa);
+    color: var(--corTextoPrimario);
+}
+
+.Botao--Desativado:hover
+{
+    background-color: var(--corBackgroundAlternativa);
+    color: var(--corTextoPrimario);
+    cursor: not-allowed;
+}
+
+.Botao--Desativado:active
+{
+    transform: none;
+    transition: none;
 }
 
 .Link
@@ -326,17 +346,17 @@ a
 
 .FundoMenuNavegacaoPrincipal
 {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 
-        background: rgba(0,0,0,0.3);
-        width: 100%;
-        height: 100%;
-        visibility: hidden;
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
 
-        transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .FundoMenuNavegacaoPrincipal--Aberto
@@ -409,14 +429,14 @@ a
     flex-grow: 1;
     justify-content: start;
     align-items: stretch;
-    gap: 1rem;
+
 }
 
 .ProjetoMenu
 {
     flex-shrink: 0;
 
-    padding: 0 0.75rem 0.75rem 0.75rem;
+    padding: 1rem;
 
     display: flex;
     flex-direction: row;
@@ -461,7 +481,7 @@ a
 {
     border: 2px solid transparent;
 
-    padding-bottom: 1rem;
+    padding: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -499,6 +519,173 @@ a
     border-bottom-color: var(--corPrimaria);
 }
 
+.ContainerArtefatos
+{
+    border: 2px solid transparent;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    justify-content: start;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.ContainerProjetoApresentacao
+{
+    width: clamp(16rem, 95vw, 56rem);
+    padding: 1rem;
+    margin: 0 auto;
+
+    box-shadow: var(--sombraVertical);
+    border-radius: 0.5rem;
+    border: 1px solid var(--corBordas);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.ProjetoApresentacao__Conteudo
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.ProjetoApresentacao__NomeProjeto
+{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--corSecundaria);
+}
+
+.ProjetoApresentacao__Titulo
+{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--corTextoPrimario);
+
+    background-color: var(--corBackgroundAlternativa);
+}
+
+.ProjetoApresentacao__Subtitulo
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--corTextoPrimario);
+
+    background-color: var(--corBackgroundAlternativa);
+}
+
+.Texto
+{
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.25rem;
+    text-justify: inter-word;
+    word-break: break-all;
+}
+
+.ProjetoApresentacao__Imagem
+{
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--corContraste);
+    border-radius: 1rem;
+    margin: 0 auto;
+}
+
+.ProjetoApresentacao__Imagem--Pequena
+{
+    width: 360px;
+    height: 202px;
+}
+
+.ProjetoApresentacao__Imagem--Media
+{
+    width: 520px;
+    height: 292px;
+}
+
+.ProjetoApresentacao__Lista
+{
+    counter-reset: item;
+    list-style: none;
+}
+
+.ProjetoApresentacao__Lista--Ordenada > .ProjetoApresentacao__ItemLista
+{
+    counter-increment: item;
+}
+
+.ProjetoApresentacao__Lista--Ordenada > .ProjetoApresentacao__ItemLista::before
+{
+    content: counter(item) ".";
+}
+
+.ProjetoApresentacao__Lista--NaoOrdenada > .ProjetoApresentacao__ItemLista::before
+{
+    content: "•";
+}
+
+.ProjetoApresentacao__ItemLista
+{
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.25rem;
+    text-justify: inter-word;
+    word-break: break-all;
+
+    padding: 0.25rem;
+}
+
+.ProjetoApresentacao__ItemLista::before
+{
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.ProjetoApresentacao__FundoPopupAdicaoElementos
+{
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.ProjetoApresentacao__PopupAdicaoElementos
+{
+    background-color: var(--corBackground);
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.DisplayFlex
+{
+    display: flex;
+}
+
+.DisplayNone
+{
+    display: none;
+}
+
 @media screen and (width > 496px)
 {
     .ProjetoMenu
@@ -513,5 +700,12 @@ a
     {
         flex-direction: row;
         justify-content: center;
+    }
+
+    .ProjetoApresentacao__PopupAdicaoElementos
+    {
+        height: auto;
+        width: clamp(16rem, 50vw, 32rem);
+        border-radius: 1.5rem;
     }
 }
