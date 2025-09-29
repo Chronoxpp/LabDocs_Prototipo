@@ -126,7 +126,7 @@ input, select, textarea
     border: 2px solid transparent;
     border-bottom-color: var(--corBordas);
 
-    font-size: 1.1rem;
+    font-size: 1.25rem;
 
     transition: all 0.3s ease;
 }
