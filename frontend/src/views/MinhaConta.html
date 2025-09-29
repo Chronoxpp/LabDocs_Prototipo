@@ -2,60 +2,71 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Minha conta no LabDocs</title>
+    <title>LabDocs - minha conta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <div class="ContainerGeral">
-        <div id="containerMenuNavegacaoPrincipal"></div>
+    <div id="containerMenuNavegacaoPrincipal"></div>
 
-        <header class="AppBarra">
-            <button class="Botao" id="botaoAbrirMenuNavegacaoPrincipal">Menu</button>
-            <h1 class="TextoTitulo">LabDocs</h1>
-        </header>
+    <header class="AppBarra">
+        <button class="Botao" id="botaoAbrirMenuNavegacaoPrincipal">Menu</button>
+        <h1 class="AppBarra__Plataforma">LabDocs</h1>
+    </header>
 
-        <div class="ContainerConteudo">
-            <div class="InformacoesDaConta">
-                    <form class="ContainerCentralizador">
-                        <div class="BlocoLabelInput">
-                            <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" placeholder="Digite seu CPF" required>
-                        </div>
+    <div class="AppConteudo">
+        <div class="ContainerMinhaConta">
+            <form class="MinhaConta__Formulario">
+                <div class="BlocoLabelInput">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" placeholder="Digite seu CPF" required>
+                </div>
 
-                        <div class="BlocoLabelInput">
-                            <label for="nomeCompleto">Nome completo</label>
-                            <input type="text" id="nomeCompleto" placeholder="Digite seu nome completo" required>
-                        </div>
+                <div class="BlocoLabelInput">
+                    <label for="nomeCompleto">Nome completo</label>
+                    <input type="text" id="nomeCompleto" placeholder="Digite seu nome completo" required>
+                </div>
 
-                        <div class="BlocoLabelInput">
-                            <label for="usuario">Usuário</label>
-                            <input type="text" id="usuario" placeholder="Digite seu nome de usuário" required>
-                        </div>
+                <div class="BlocoLabelInput">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" placeholder="Digite seu nome de usuário" required>
+                </div>
 
-                        <div class="BlocoLabelInput">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Digite um email que você usa" required>
-                        </div>
+                <div class="BlocoLabelInput">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Digite um email que você usa" required>
+                </div>
 
-                        <button class="Botao Botao--Acao" type="submit">Salvar</button>
-                        <button class="Botao Botao--Perigo" type="submit">Deletar minha conta</button>
-                    </form>
+                <button class="Botao Botao--Acao" type="submit">Salvar</button>
+                <button class="Botao Botao--Perigo" type="submit">Deletar minha conta</button>
+            </form>
 
-                    <form class="ContainerCentralizador">
-                        <div class="BlocoLabelInput">
-                            <label for="senha">Senha</label>
-                            <input type="password" id="senha" placeholder="Digite sua nova senha" required>
-                        </div>
+            <form class="MinhaConta__Formulario">
+                <div class="BlocoLabelInput">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua nova senha" required>
+                </div>
 
-                        <div class="BlocoLabelInput">
-                            <label for="confirmaSenha">Confirme a senha</label>
-                            <input type="password" id="confirmaSenha" placeholder="Digite sua nova senha novamente" required>
-                        </div>
+                <div class="BlocoLabelInput">
+                    <label for="confirmaSenha">Confirme a senha</label>
+                    <input type="password" id="confirmaSenha" placeholder="Digite sua nova senha novamente" required>
+                </div>
 
-                        <button class="Botao Botao--Acao" type="submit">Alterar minha senha</button>
-                    </form>
-            </div>
+                <button class="Botao Botao--Acao" type="submit">Alterar minha senha</button>
+            </form>
+        </div>
+
+
+        <form class="MinhaConta__Senha">
+
+        </form>
+
+        <div class="InformacoesDaConta">
+                <form class="ContainerCentralizador">
+
+                </form>
+
+
         </div>
     </div>
 

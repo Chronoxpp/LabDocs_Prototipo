@@ -1,3 +1,75 @@
-<div>
-    <h1>Requisitos</h1>
+<div class="ContainerProjetoArtefato">
+    <h1 class="ProjetoRequisitos__NomeArtefato">Requisitos</h1>
+
+    <!--Exibicao e controle de requisitos funcionais-->
+    <section id="requisitosFuncionais" class="GrupoRequisitos">
+        <h2>Requisitos funcionais</h2>
+
+        <aside class="GrupoRequisitos__Controles">
+            <div class="BlocoLabelInput BlocoLabelInput--Horizontal">
+                <label for="requisitosFuncionaisOrdenacao">Ordernar por</label>
+                <select id="requisitosFuncionaisOrdenacao">
+                    <option value="maisRecentes">Mais recentes</option>
+                    <option value="maisAntigos">Mais antigos</option>
+                    <option value="maiorPrioridade">Maior prioridade</option>
+                    <option value="menorPrioridade">Menor prioridade</option>
+                </select>
+            </div>
+
+            <div class="BlocoLabelInput BlocoLabelInput--Horizontal">
+                <label for="requisitosFuncionaisExibeComo">Visualizar como</label>
+                <select id="requisitosFuncionaisExibeComo">
+                    <option value="tabela">Tabela</option>
+                    <option value="lista">Lista</option>
+                    <option value="cartoes">Cartões</option>
+                </select>
+            </div>
+        </aside>
+
+        <main class="GrupoRequisitos__Conteudo">
+            <!-- Lista (ul/li) -->
+            <ul class="RequisitosLista">
+                <li class="RequisitosLista__Item">
+                    <div class="RequisitosLista__ItemId">RF-1</div>
+                    <div class="RequisitosLista__ItemResumo">Cadastro e manutenção de requisitos</div>
+                    <div class="RequisitosLista__ItemDescricao">O sistemas deve permitir o cadastro e manutenção de requisitos funcionais, requisitos não funcionais e reqisitos de dominio.</div>
+                    <div class="RequisitosLista__ItemPrioridade">Necessário</div>
+                </li>
+            </ul>
+
+            <!-- Tabela -->
+            <div class="ContainerRequisitosTabela">
+                <table class="ListaRequisitosTabela">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Resumo</th>
+                            <th>Descrição</th>
+                            <th>Prioridade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RF-1</td>
+                            <td>Cadastro e manutenção de requisitos</td>
+                            <td>O sistemas deve permitir o cadastro e manutenção de requisitos funcionais, requisitos não funcionais e reqisitos de dominio.</td>
+                            <td>Necessário</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Cartões -->
+            <div class="RequisitosCartoes">
+                <div class="RequisitosCartoes__Cartao">
+                    <h1 class="RequisitosCartoes__CartaoCabecalho">RF-1 | Cadastro e manutenção de requisitos</h1>
+                    <p class="RequisitosCartoes__CartaoDescricao">O sistemas deve permitir o cadastro e manutenção de requisitos funcionais, requisitos não funcionais e reqisitos de dominio.</p>
+                    <p class="RequisitosCartoes__CartaoPrioridade">Necessário</p>
+                </div>
+            </div>
+
+            <!-- Empty state -->
+            <p class="RequisitosNenhumResultado">Nenhum requisito encontrado.</p>
+        </main>
+    </section>
 </div>

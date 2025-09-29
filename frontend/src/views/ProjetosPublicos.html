@@ -7,51 +7,48 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <div class="ContainerGeral">
-        <div id="containerMenuNavegacaoPrincipal"></div>
+    <div id="containerMenuNavegacaoPrincipal"></div>
 
-        <header class="AppBarra">
-            <button class="Botao" id="botaoAbrirMenuNavegacaoPrincipal">Menu</button>
-            <h1 class="TextoTitulo">LabDocs</h1>
-        </header>
+    <header class="AppBarra">
+        <button class="Botao" id="botaoAbrirMenuNavegacaoPrincipal">Menu</button>
+        <h1 class="AppBarra__Plataforma">LabDocs</h1>
+    </header>
 
-        <div class="ContainerConteudo">
-            <aside class="BarraConsultaProjetos">
-                <div class="BlocoLabelInput">
-                    <label for="textoPesquisa">Pesquisar</label>
-                    <input type="search" id="textoPesquisa" placeholder="Titulo ou Descrição">
-                </div>
+    <main class="AppConteudo">
+        <aside class="ProjetosPublicos__Controles">
+            <div class="BlocoLabelInput">
+                <label for="textoPesquisa">Pesquisar</label>
+                <input type="search" id="textoPesquisa" placeholder="Titulo ou Descrição">
+            </div>
+            <a href="#" class="Link">Acessar super consulta</a>
+        </aside>
 
-                <a href="#" class="Link">Acessar super consulta</a>
-            </aside>
+        <main class="ProjetosPublicos__Projetos">
+            <div class="ProjetosPublicos__Projeto">
+                <h1 class="ProjetosPublicos__ProjetoTitulo">Projeto XPTO</h1>
+                <p class="ProjetosPublicos__ProjetoDescricao">Aenean neque metus, placerat id velit non, rhoncus varius tellus. Aliquam porttitor placerat lacus a placerat. Mauris feugiat nisl at nibh posuere, et semper velit laoreet.</p>
+                <a href="Projeto.html" class="Botao Botao--Acao">Acessar</a>
+            </div>
 
-            <main class="ListaProjetos">
-                <div class="ListaProjetos__Projeto">
-                    <h1 class="Projeto__Titulo">Projeto XPTO</h1>
-                    <p class="Projeto__Descricao">Aenean neque metus, placerat id velit non, rhoncus varius tellus. Aliquam porttitor placerat lacus a placerat. Mauris feugiat nisl at nibh posuere, et semper velit laoreet.</p>
-                    <a href="Projeto.html" class="Botao Botao--Acao">Acessar</a>
-                </div>
+            <div class="ProjetosPublicos__Projeto">
+                <h1 class="ProjetosPublicos__ProjetoTitulo">Projeto XPTO</h1>
+                <p class="ProjetosPublicos__ProjetoDescricao">Aenean neque metus, placerat id velit non, rhoncus varius tellus. Aliquam porttitor placerat lacus a placerat. Mauris feugiat nisl at nibh posuere, et semper velit laoreet.</p>
+                <a href="Projeto.html" class="Botao Botao--Acao">Acessar</a>
+            </div>
 
-                <div class="ListaProjetos__Projeto">
-                    <h1 class="Projeto__Titulo">Projeto XPTO</h1>
-                    <p class="Projeto__Descricao">Aenean neque metus, placerat id velit non, rhoncus varius tellus. Aliquam porttitor placerat lacus a placerat. Mauris feugiat nisl at nibh posuere, et semper velit laoreet.</p>
-                    <a href="Projeto.html" class="Botao Botao--Acao">Acessar</a>
-                </div>
+            <div class="ProjetosPublicos__Projeto">
+                <h1 class="ProjetosPublicos__ProjetoTitulo">Projeto XPTO</h1>
+                <p class="ProjetosPublicos__ProjetoDescricao">Aenean neque metus, placerat id velit non, rhoncus varius tellus. Aliquam porttitor placerat lacus a placerat. Mauris feugiat nisl at nibh posuere, et semper velit laoreet.</p>
+                <a href="Projeto.html" class="Botao Botao--Acao">Acessar</a>
+            </div>
 
-                <div class="ListaProjetos__Projeto">
-                    <h1 class="Projeto__Titulo">Projeto XPTO</h1>
-                    <p class="Projeto__Descricao">Aenean neque metus, placerat id velit non, rhoncus varius tellus. Aliquam porttitor placerat lacus a placerat. Mauris feugiat nisl at nibh posuere, et semper velit laoreet.</p>
-                    <a href="Projeto.html" class="Botao Botao--Acao">Acessar</a>
-                </div>
-
-                <div class="ListaProjetos__Projeto">
-                    <h1 class="Projeto__Titulo">Projeto XPTO</h1>
-                    <p class="Projeto__Descricao">Aenean neque metus, placerat id velit non, rhoncus varius tellus. Aliquam porttitor placerat lacus a placerat. Mauris feugiat nisl at nibh posuere, et semper velit laoreet.</p>
-                    <a href="Projeto.html" class="Botao Botao--Acao">Acessar</a>
-                </div>
-            </main>
-        </div>
-    </div>
+            <div class="ProjetosPublicos__Projeto">
+                <h1 class="ProjetosPublicos__ProjetoTitulo">Projeto XPTO</h1>
+                <p class="ProjetosPublicos__ProjetoDescricao">Aenean neque metus, placerat id velit non, rhoncus varius tellus. Aliquam porttitor placerat lacus a placerat. Mauris feugiat nisl at nibh posuere, et semper velit laoreet.</p>
+                <a href="Projeto.html" class="Botao Botao--Acao">Acessar</a>
+            </div>
+        </main>
+    </main>
 
     <script type="module" src="../scripts/componentes/menuNavegacaoPrincipal.js"></script>
 </body>

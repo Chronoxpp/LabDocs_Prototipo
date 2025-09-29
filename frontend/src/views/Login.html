@@ -7,42 +7,31 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <div class="ContainerGeral">
-        <div id="containerMenuNavegacaoPrincipal"></div>
+    <div id="containerMenuNavegacaoPrincipal"></div>
 
-        <header class="AppBarra">
-            <button class="Botao" id="botaoAbrirMenuNavegacaoPrincipal">Menu</button>
-            <h1 class="TextoTitulo">LabDocs</h1>
-        </header>
+    <header class="AppBarra">
+        <button class="Botao" id="botaoAbrirMenuNavegacaoPrincipal">Menu</button>
+        <h1 class="AppBarra__Plataforma">LabDocs</h1>
+    </header>
 
-        <main class="ContainerLogin">
-            <form action="ProjetosPublicos.html" class="FormularioLogin">
-                <div class="BlocoLabelInput">
-                    <label for="usuario">Usuário ou email</label>
-                    <input type="text" id="usuario" placeholder="Digite seu usuário ou email" required>
-                </div>
+    <main class="AppConteudo">
+        <form action="ProjetosPublicos.html" class="FormularioLogin">
+            <div class="BlocoLabelInput">
+                <label for="usuario">Usuário ou email</label>
+                <input type="text" id="usuario" placeholder="Digite seu usuário ou email" required>
+            </div>
 
-                <div class="BlocoLabelInput">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="Digite sua senha" required>
-                </div>
+            <div class="BlocoLabelInput">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+            </div>
 
-                <button class="Botao Botao--Acao" type="submit">Entrar</button>
-                <button class="Botao" id="botaoMeCadastrar" type="button">Me cadastrar</button>
-                <a href="EsqueciMinhaSenha.html" class="Link">Esqueci minha senha!</a>
-            </form>
-        </main>
-    </div>
+            <button class="Botao Botao--Acao" type="submit">Entrar</button>
+            <a href="Cadastro.html" class="Botao">Me cadastrar</a>
+            <a href="EsqueciMinhaSenha.html" class="Link">Esqueci minha senha!</a>
+        </form>
+    </main>
 
     <script type="module" src="../scripts/componentes/menuNavegacaoPrincipal.js"></script>
-    <script>
-        document.querySelector('#botaoMeCadastrar').addEventListener(
-            'click',
-            () =>
-            {
-                window.location.replace('Cadastro.html');
-            }
-        );
-    </script>
 </body>
 </html>

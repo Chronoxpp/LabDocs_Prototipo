@@ -1,6 +1,7 @@
 /* Variaveis de ambiente do CSS */
 :root 
 {
+    /* Paleta principal */
     --corPrimaria: #16A34A;
     --corPrimariaAlternativa: #22C55E;
     --corSecundaria: #2563EB;
@@ -8,20 +9,37 @@
     --corPerigo: #DC2626;
     --corInativo: #6E6E6E;
 
+    /* Texto */
     --corTextoPrimario: #000000;
     --corTextoSecundario: #6E6E6E;
     --corTitulo: #2563EB;
 
+    /* Background */
     --corBackground: #FFFFFF;
     --corBackgroundAlternativa: #F2F2F2;
 
+    /* Escala de espaçamento */
+    --espacoExtraPequeno: 0.25rem;
+    --espacoPequeno: 0.5rem;
+    --espacoMedio: 1rem;
+    --espacoGrande: 2rem;
+    --espacoExtraGrande: 3rem;
+
+    /* Curvas */
+    --semCurva: 0;
+    --curvaPequena: 0.25rem;
+    --curvaMedia: 0.5rem;
+    --curvaGrande: 1rem;
+    --curvaExtraGrande: 1.5rem;
+
+    /* Outros */
     --corContraste: #000000;
     --corBordas: #D1D5DB;
-
     --sombraVertical: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Reset simples */
+
+/* Reset */
 * 
 {
     margin: 0;
@@ -29,203 +47,72 @@
     box-sizing: border-box;
 }
 
-html
+html, body
 {
     height: 100%;
     width: 100%;
+
+    background-color: var(--corBackground);
+
+    color: var(--corTextoPrimario);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body
 {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--corBackground);
-    color: var(--corTextoPrimario);
-    height: 100%;
-    width: 100%;
-}
-
-/* Estrutura base da pagina */
-.ContainerGeral 
-{
     background-color: var(--corBackground);
 
-    width: 100%;
-    height: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: stretch;
 }
 
-.ContainerConteudo
-{
-    padding: 1rem 0rem;
 
+/* Utilitários */
+.FlexCol
+{
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-    justify-content: start;
-    align-items: stretch;
-    gap: 2rem;
 }
 
-.AppBarra 
+.FlexRow
 {
-    padding: 0.5rem 1rem;
-
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-
-    overflow-x: auto;
-    flex-shrink: 0;
 }
 
-.BarraConsultaProjetos
+.Centralizar
 {
-    padding: 0 1rem;
-
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-}
-
-.BarraConsultaProjetos input
-{
-    width: clamp(16rem, 50vw, 32rem);
-}
-
-.TextoTitulo 
-{
-    color: var(--corPrimaria);
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.TextoSubTitulo
-{
-    color: var(--corPrimaria);
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.ContainerLogin 
-{
-    flex-grow: 1;
-    padding: 1rem;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
     justify-content: center;
-}
-
-.FormularioLogin 
-{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: start;
-    align-items: stretch;
-    gap: 1rem;
-
-    width: clamp(16rem, 50vw, 32rem);
-}
-
-.ListaProjetos
-{
-    padding: 0.5rem 0;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow-y: auto;
-    flex-shrink: 0;
-    justify-content: center;
-
-    gap: 2rem;
-}
-
-.ListaProjetos__Projeto
-{
-    padding: 1rem;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    gap: 1rem;
-
-    border: 1px solid var(--corBordas);
-    /* border-left-color: var(--corContraste); */
-
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-    border-radius: 0.5rem;
-
-    width: clamp(24rem, 25vw, 72rem);
-}
-
-.Projeto__Titulo
-{
-    color: var(--corTextoPrimario);
-    font-size: 1.75rem;
-    font-weight: bold;
-}
-
-.InformacoesDaConta
-{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: start;
     align-items: center;
-    gap: 2rem;
 }
 
-.InformacoesDaConta__DadosGerais
+.Esconder
 {
-    width: clamp(16rem, 50vw, 32rem);
+    display: none !important;
 }
 
-.InformacoesDaConta__AlteraSenha
-{
-    width: clamp(16rem, 50vw, 32rem);
-}
 
-.ContainerCentralizador
+/* Inputs, labels e botoes */
+.BlocoLabelInput
 {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: start;
-    align-items: stretch;
-    gap: 1rem;
-
-    width: clamp(16rem, 50vw, 32rem);
-}
-
-.BlocoLabelInput 
-{
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    overflow: hidden;
+    gap: var(--espacoExtraPequeno);
 }
 
 label
 {
-    font-size: 0.85rem;
     color: var(--corTextoSecundario);
+    font-size: 0.9rem;
     font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 select
@@ -235,11 +122,11 @@ select
 
 input, select, textarea
 {
-    padding: 0.5rem 0.25rem;
+    padding: var(--espacoExtraPequeno) var(--espacoPequeno);
     border: 2px solid transparent;
     border-bottom-color: var(--corBordas);
 
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     transition: all 0.3s ease;
 }
@@ -251,46 +138,52 @@ input:hover, select:hover, textarea:hover
 
 input:focus, select:focus, textarea:focus
 {
+    background-color: rgba(22, 163, 74, 0.1);
+
     outline: none;
     border-bottom-color: var(--corPrimaria);
 }
 
 .Botao
 {
-    text-align: center;
+    padding: var(--espacoPequeno) var(--espacoGrande);
 
-    padding: 0.5rem 1rem;
-    border: 1px solid transparent;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--curvaGrande);
     box-shadow: var(--sombraVertical);
-    border-radius: 1rem;
-    background-color: var(--corBackground);
+
     font-size: 1rem;
+    text-align: center;
     font-weight: bold;
 
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .Botao:hover
 {
     background-color: var(--corContraste);
+    border-color: var(--corContraste);
+
     color: var(--corBackground)
 }
 
 .Botao:active
 {
-    transform: scale(0.95);
-    transition: all 0.2s ease;
+    transform: scale(0.90);
 }
 
-.Botao--Acao 
+.Botao--Acao
 {
     color: var(--corPrimaria);
 }
 
-.Botao--Acao:hover 
+.Botao--Acao:hover
 {
     background-color: var(--corPrimaria);
+    border-color: var(--corPrimaria);
+
     color: var(--corBackground);
 }
 
@@ -302,40 +195,207 @@ input:focus, select:focus, textarea:focus
 .Botao--Perigo:hover
 {
     background-color: var(--corPerigo);
+    border-color: var(--corPerigo);
+
     color: var(--corBackground);
 }
 
 .Botao--Desativado
 {
     background-color: var(--corBackgroundAlternativa);
+    border-color: transparent;
+    box-shadow: none;
+
     color: var(--corTextoPrimario);
 }
 
 .Botao--Desativado:hover
 {
     background-color: var(--corBackgroundAlternativa);
+    border-color: transparent;
+    box-shadow: none;
+
     color: var(--corTextoPrimario);
+
     cursor: not-allowed;
 }
 
 .Botao--Desativado:active
 {
     transform: none;
-    transition: none;
 }
 
+
+/* Estrutura base */
+.AppBarra
+{
+    padding: var(--espacoPequeno) var(--espacoMedio);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--espacoMedio);
+    overflow-x: auto;
+    flex-shrink: 0;
+}
+
+.AppBarra__Plataforma
+{
+    color: var(--corPrimaria);
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.AppConteudo
+{
+    flex-grow: 1;
+
+    padding: var(--espacoMedio) 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: var(--espacoMedio);
+}
+
+
+/* Consulta de projetos publicos */
+.ProjetosPublicos__Controles
+{
+    width: clamp(16rem, 50vw, 32rem);
+    padding: var(--espacoMedio);
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: var(--espacoMedio);
+}
+
+.ProjetosPublicos__Controles .Link
+{
+    text-align: center;
+}
+
+.ProjetosPublicos__Projetos
+{
+    flex-shrink: 0;
+
+    padding: var(--espacoPequeno);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: start;
+    gap: var(--espacoGrande);
+}
+
+.ProjetosPublicos__Projeto
+{
+    width: clamp(16rem, 90vw, 24rem);
+    padding: var(--espacoMedio);
+
+    border: 1px solid var(--corBordas);
+    border-radius: var(--curvaMedia);
+    box-shadow: var(--sombraVertical);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: var(--espacoMedio);
+}
+
+.ProjetosPublicos__ProjetoTitulo
+{
+    font-size: 1.25rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ProjetosPublicos__ProjetoDescricao
+{
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    word-break: break-all;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/* Pagina de login */
+.FormularioLogin 
+{
+    width: clamp(16rem, 75vw, 32rem);
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: var(--espacoMedio);
+}
+
+
+/* Minha conta */
+.ContainerMinhaConta
+{
+    margin: auto;
+    width: clamp(16rem, 75vw, 24rem);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: var(--espacoExtraGrande);
+}
+
+.MinhaConta__Formulario
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+
+/* Links */
 .Link
 {
     text-decoration: none;
 
-    font-size: 0.9rem;
+    border: 1px solid transparent;
+
     color: var(--corSecundaria);
+    font-size: 0.95rem;
     font-weight: bold;
+
+    transition: all 0.1s ease;
 }
 
 .Link:hover
 {
     text-decoration: underline;
+    transform: scaleY(1.1) scaleY(1.1);
 }
 
 a
@@ -344,6 +404,8 @@ a
     color: var(--corTextoPrimario);
 }
 
+
+/* Menu de navegação principal */
 .FundoMenuNavegacaoPrincipal
 {
     position: fixed;
@@ -430,6 +492,7 @@ a
     justify-content: start;
     align-items: stretch;
 
+    gap: 1rem;
 }
 
 .ProjetoMenu
@@ -445,6 +508,13 @@ a
     align-items: center;
     overflow-x: auto;
     gap: 1rem;
+
+    width: clamp(16rem, 95vw, 56rem);
+    margin: 0 auto;
+
+    box-shadow: var(--sombraVertical);
+    border-radius: 0.5rem;
+    border: 1px solid var(--corBordas);
 }
 
 .ProjetoMenu__Item
@@ -479,17 +549,22 @@ a
 
 .ProjetoMenuArtefatos
 {
-    border: 2px solid transparent;
-
     padding: 1rem;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     overflow-x: auto;
     flex-shrink: 0;
     gap: 1rem;
+
+    width: clamp(16rem, 95vw, 56rem);
+    margin: 0 auto;
+
+    box-shadow: var(--sombraVertical);
+    border-radius: 0.5rem;
+    border: 1px solid var(--corBordas);
 }
 
 .ProjetoMenuArtefatos__Item
@@ -527,24 +602,6 @@ a
     flex-direction: column;
     flex-wrap: nowrap;
     flex-grow: 1;
-    justify-content: start;
-    align-items: stretch;
-    gap: 2rem;
-}
-
-.ContainerProjetoApresentacao
-{
-    width: clamp(16rem, 95vw, 56rem);
-    padding: 1rem;
-    margin: 0 auto;
-
-    box-shadow: var(--sombraVertical);
-    border-radius: 0.5rem;
-    border: 1px solid var(--corBordas);
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: start;
     align-items: stretch;
     gap: 2rem;
@@ -684,6 +741,34 @@ a
 .DisplayNone
 {
     display: none;
+}
+
+.ContainerProjetoArtefatos
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: 3rem;
+}
+
+.ContainerProjetoArtefato
+{
+    width: clamp(16rem, 95vw, 56rem);
+    padding: 1rem;
+    margin: 0 auto;
+
+    box-shadow: var(--sombraVertical);
+    border-radius: 0.5rem;
+    border: 1px solid var(--corBordas);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: 2rem;
 }
 
 @media screen and (width > 496px)
