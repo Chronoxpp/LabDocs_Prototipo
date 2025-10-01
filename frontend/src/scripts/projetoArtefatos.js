@@ -2,7 +2,7 @@ import {carregarComponente, importarModulo} from './utilitarios/carregadores.js'
 
 export function init()
 {
-    const containerArtefatos = document.querySelector('#containerArtefatos');
+    const containerArtefatos = document.querySelector('#containerArtefatoProjeto');
 
     //Carrega o artefato de apresentacao do projeto
     const botaoArtefatoApresentacao = document.querySelector('#botaoArtefatoApresentacao');
@@ -91,19 +91,19 @@ export function init()
     }
 
     //Outras funcoes auxiliares
-    const itensProjetoMenuArtefatos = document.querySelectorAll('.ProjetoMenuArtefatos__Item');
+    const itensProjetoMenuArtefatos = document.querySelectorAll('.MenuArtefatosProjeto__Item');
     function desmarcarItensProjetoMenuArtefatos()
     {
         itensProjetoMenuArtefatos.forEach(
             (item) =>
             {
-                item.classList.remove('ProjetoMenuArtefatos__Item--Selecionado');
+                item.classList.remove('MenuArtefatosProjeto__Item--Selecionado');
             }
         );
     }
 
     function marcarItemProjetoMenuArtefatos(item)
     {
-        item.classList.add('ProjetoMenuArtefatos__Item--Selecionado');
+        item.classList.add('MenuArtefatosProjeto__Item--Selecionado');
     }
 }

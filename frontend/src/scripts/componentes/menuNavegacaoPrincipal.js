@@ -1,8 +1,8 @@
 import {carregarComponente} from "../utilitarios/carregadores.js";
 
-(async function ()
+export async function init()
 {
-    const containerMenuNavegacaoPrincipal = document.querySelector('#containerMenuNavegacaoPrincipal');
+    const componenteMenuNavegacaoPrincipal = document.querySelector('#componenteMenuNavegacaoPrincipal');
 
     await carregarMenuNavegacaoPrincipal();
 
@@ -10,17 +10,20 @@ import {carregarComponente} from "../utilitarios/carregadores.js";
     {
         try
         {
-            await carregarComponente(containerMenuNavegacaoPrincipal, '../views/componentes/menuNavegacaoPrincipal.html');
+            await carregarComponente(componenteMenuNavegacaoPrincipal, '../views/componentes/menuNavegacaoPrincipal.html');
         } catch (erro)
         {
             console.error('Falha ao carregar menu de navegacao principal', erro);
-            containerMenuNavegacaoPrincipal.innerHTML = 'Falha ao carregar menu de navegacao principal';
+            componenteMenuNavegacaoPrincipal.innerHTML = 'Falha ao carregar menu de navegacao principal';
         }
 
         const fundoMenuNavegacaoPrincipal = document.querySelector('#fundoMenuNavegacaoPrincipal');
-        const menuNavegacaoPrincipal = document.querySelector('#menuNavegacaoPrincipal');
+        const containerMenuNavegacaoPrincipal = document.querySelector('#containerMenuNavegacaoPrincipal');
 
         const botaoAbrirMenuNavegacaoPrincipal = document.querySelector('#botaoAbrirMenuNavegacaoPrincipal');
+        const botaoFecharMenuNavegacaoPrincipal = document.querySelector('#botaoFecharMenuNavegacaoPrincipal');
+
+        
         botaoAbrirMenuNavegacaoPrincipal.addEventListener(
             'click',
             () =>
@@ -31,11 +34,11 @@ import {carregarComponente} from "../utilitarios/carregadores.js";
 
         function abrirMenuNavegacaoPrincipal()
         {
-            fundoMenuNavegacaoPrincipal.classList.add("FundoMenuNavegacaoPrincipal--Aberto");
-            menuNavegacaoPrincipal.classList.add("MenuNavegacaoPrincipal--Aberto");
+            fundoMenuNavegacaoPrincipal.classList.add("Visivel");
+            containerMenuNavegacaoPrincipal.classList.add('Visivel');
         }
 
-        const botaoFecharMenuNavegacaoPrincipal = document.querySelector('#botaoFecharMenuNavegacaoPrincipal');
+        
         botaoFecharMenuNavegacaoPrincipal.addEventListener(
             'click',
             () =>
@@ -46,8 +49,8 @@ import {carregarComponente} from "../utilitarios/carregadores.js";
 
         function fecharMenuNavegacaoPrincipal()
         {
-            fundoMenuNavegacaoPrincipal.classList.remove("FundoMenuNavegacaoPrincipal--Aberto");
-            menuNavegacaoPrincipal.classList.remove("MenuNavegacaoPrincipal--Aberto");
+            fundoMenuNavegacaoPrincipal.classList.remove("Visivel");
+            containerMenuNavegacaoPrincipal.classList.remove('Visivel');
         }
 
         fundoMenuNavegacaoPrincipal.addEventListener(
@@ -59,4 +62,3 @@ import {carregarComponente} from "../utilitarios/carregadores.js";
         );
     }
 }
-)();

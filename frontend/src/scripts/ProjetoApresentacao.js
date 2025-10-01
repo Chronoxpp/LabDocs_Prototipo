@@ -1,6 +1,7 @@
 export function init()
 {
     const fundoPopupAdicaoElementos = document.querySelector('#fundoPopupAdicaoElementos');
+    const popupAdicaoElementos = document.querySelector('#popupAdicaoElementos');
     const projetoApresentacaoConteudo = document.querySelector('#projetoApresentacaoConteudo');
     const containerInputConteudoElemento = document.querySelector('#containerInputConteudoElemento');
     const containerInputTextoLivre = document.querySelector('#containerInputTextoLivre');
@@ -27,6 +28,7 @@ export function init()
     function abrirPopup()
     {
         fundoPopupAdicaoElementos.classList.add('DisplayFlex');
+        popupAdicaoElementos.classList.add('DisplayFlex');
     }
 
 
@@ -42,7 +44,16 @@ export function init()
     function fecharPopup()
     {
         fundoPopupAdicaoElementos.classList.remove('DisplayFlex');
+        popupAdicaoElementos.classList.remove('DisplayFlex');
     }
+
+    fundoPopupAdicaoElementos.addEventListener(
+        'click',
+        () =>
+        {
+            fecharPopup();
+        }
+    );
 
     removerDisplayTodosContainersInputs();
     function removerDisplayTodosContainersInputs()
@@ -92,11 +103,11 @@ export function init()
                 break;
         }
 
-        if (! (inputTipoElemento.value === 'listaOrdenada' || inputTipoElemento.value === 'listaNaoOrdenada'))
-        {
+        // if (! (inputTipoElemento.value === 'listaOrdenada' || inputTipoElemento.value === 'listaNaoOrdenada'))
+        // {
             botaoAdicionarElemento.classList.remove('Botao--Desativado');
             botaoAdicionarElemento.enabled = true;
-        }
+        // }
     }
 
 
@@ -132,7 +143,7 @@ export function init()
 
                 elemento = document.createElement("h1");
                 elemento.textContent = inputConteudoElemento.value.trim();
-                elemento.classList.add('ProjetoApresentacao__Titulo');
+                elemento.classList.add('ArtefatoApresentacaoProjeto__Titulo');
                 break;
 
             case "subtitulo":
@@ -140,7 +151,7 @@ export function init()
 
                 elemento = document.createElement("h2");
                 elemento.textContent = inputConteudoElemento.value.trim();
-                elemento.classList.add('ProjetoApresentacao__Subtitulo');
+                elemento.classList.add('ArtefatoApresentacaoProjeto__Subtitulo');
                 break;
 
             case "texto":
@@ -148,6 +159,7 @@ export function init()
 
                 elemento = document.createElement("p");
                 elemento.textContent = inputTextoLivre.value.trim();
+                elemento.classList.add('ArtefatoApresentacaoProjeto__Texto');
                 elemento.classList.add('Texto');
                 break;
 
@@ -156,8 +168,22 @@ export function init()
 
                 elemento = document.createElement("img");
                 elemento.src = inputConteudoElemento.value.trim();
-                elemento.classList.add('ProjetoApresentacao__Imagem');
-                elemento.classList.add(inputTamanhoImagem.value === 'pequena'? 'ProjetoApresentacao__Imagem--Pequena' : 'ProjetoApresentacao__Imagem--Media');
+                elemento.classList.add('ArtefatoApresentacaoProjeto__Imagem');
+                elemento.classList.add(inputTamanhoImagem.value === 'pequena'? 'ArtefatoApresentacaoProjeto__Imagem--Pequena' : 'ArtefatoApresentacaoProjeto__Imagem--Media');
+                break;
+
+            case 'listaOrdenada':
+                elemento = document.createElement("ol");
+                elemento.classList.add('ArtefatoApresentacaoProjeto__Lista');
+                elemento.classList.add('ArtefatoApresentacaoProjeto__Lista--Ordenada');
+                elemento.innerHTML = '<li>Item 1</li><li>Item 2</li>';
+                break;
+
+            case 'listaNaoOrdenada':
+                elemento = document.createElement("ul");
+                elemento.classList.add('ArtefatoApresentacaoProjeto__Lista');
+                elemento.classList.add('ArtefatoApresentacaoProjeto__Lista--NaoOrdenada');
+                elemento.innerHTML = '<li>Item 1</li> <li>Item 2</li> <li>Item 3</li>';
                 break;
         }
 

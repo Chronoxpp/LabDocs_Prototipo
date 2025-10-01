@@ -7,29 +7,20 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <div class="ContainerGeral">
-        <div id="containerMenuNavegacaoPrincipal"></div>
+    <div id="appComponentesBasicos"></div>
 
-        <header class="AppBarra">
-            <button class="Botao" id="botaoAbrirMenuNavegacaoPrincipal">Menu</button>
-            <h1 class="TextoTitulo">LabDocs</h1>
-        </header>
+    <div class="AppConteudo">
+        <nav class="MenuAreasProjeto">
+            <button id="botaoArtefatos" class="MenuAreasProjeto__Item">Projeto</button>
+            <button id="botaoTarefas" class="MenuAreasProjeto__Item">Tarefas</button>
+            <button id="botaoEquipe" class="MenuAreasProjeto__Item">Equipe</button>
+            <button id="botaoConfiguracoes" class="MenuAreasProjeto__Item">Configurações</button>
+        </nav>
 
-        <div class="ContainerConteudo">
-            <div class="ContainerProjeto">
-                <nav class="ProjetoMenu">
-                    <button id="botaoArtefatos" class="ProjetoMenu__Item">Artefatos</button>
-                    <button id="botaoTarefas" class="ProjetoMenu__Item">Tarefas</button>
-                    <button id="botaoEquipe" class="ProjetoMenu__Item">Equipe</button>
-                    <button id="botaoConfiguracoes" class="ProjetoMenu__Item">Configurações</button>
-                </nav>
-
-                <div id="containerProjetoVisualizacao" class="ContainerProjetoVisualizacaoConteudo"></div>
-            </div>
-        </div>
+        <div id="containerConteudoAreaProjeto" class="ContainerConteudoAreaProjeto"></div>
     </div>
 
-    <script type="module" src="../scripts/componentes/menuNavegacaoPrincipal.js"></script>
+    <script type="module" src="../scripts/appComponentesBasicos.js"></script>
     <script type="module" src="../scripts/projeto.js"></script>
 </body>
 </html>

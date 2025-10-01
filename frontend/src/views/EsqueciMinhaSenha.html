@@ -7,22 +7,20 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <div class="ContainerGeral">
-        <header class="AppBarra">
-            <h1 class="TextoTitulo">LabDocs</h1>
-        </header>
+    <div id="appComponentesBasicos"></div>
 
-        <main class="ContainerLogin">
-            <form action="ProjetosPublicos.html" class="FormularioLogin">
-                <div class="BlocoLabelInput">
-                    <label for="usuario">Identifique-se</label>
-                    <input type="text" id="usuario" placeholder="Digite seu CPF, Usuário ou Email" required>
-                </div>
-                <button class="Botao Botao--Acao">Alterar minha senha</button>
-                <a href="Login.html" class="Link">Tentar acessar minha conta novamente</a>
-                <a href="ProjetosPublicos.html" class="Link">Consultar projetos na plataforma</a>
-            </form>
-        </main>
+    <div class="AppConteudo">
+        <form action="ProjetosPublicos.html" class="FormularioEsqueciMinhaSenha">
+            <div class="BlocoLabelInput">
+                <label for="usuario">Identifique-se</label>
+                <input type="text" id="usuario" placeholder="Digite seu CPF, Usuário ou Email" required>
+            </div>
+            <button class="Botao Botao--Acao">Alterar minha senha</button>
+            <a href="Login.html" class="Link">Tentar acessar minha conta novamente</a>
+            <a href="ProjetosPublicos.html" class="Link">Consultar projetos na plataforma</a>
+        </form>
     </div>
+
+    <script type="module" src="../scripts/appComponentesBasicos.js"></script>
 </body>
 </html>

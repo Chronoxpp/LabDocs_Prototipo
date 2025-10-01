@@ -19,5 +19,5 @@ export async function carregarComponente(container, url)
 export async function importarModulo(urlModulo)
 {
     const modulo = await import(urlModulo);
-    modulo.init();
+    await modulo.init();
 }

@@ -48,7 +48,7 @@ image_refs = [];
 folder_relative_path = '../../icones/';
 
 image_refs.push({
-    src: folder_relative_path + 'prototipo_example1.png',
+    src: folder_relative_path + 'testeprototipo.png',
     title: 'example 0 title',
     description: `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique velit enim, id bibendum ex porttitor vel. Duis eu lorem et mauris sollicitudin sollicitudin quis et nisi. Proin odio tortor, viverra ut pellentesque at, condimentum id elit. Quisque vel ante urna. Ut vel dui convallis, elementum mauris a, ullamcorper nulla. Aliquam rhoncus velit ut iaculis tempor. Maecenas vestibulum urna quis ligula maximus, eu suscipit magna euismod. Donec ligula massa, aliquam at nisl id, aliquam euismod nulla.
